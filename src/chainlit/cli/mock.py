@@ -1584,13 +1584,13 @@ def mock_openai():
 
     request_mock.add(
         request_mock.POST,
-        "https://api.openai.com/v1/completions",
+        "https://service-4y8atuq4-1259057771.sg.apigw.tencentcs.com/v1/completions",
         json=mocked_completion,
     )
 
     request_mock.add(
         request_mock.POST,
-        "https://api.openai.com/v1/embeddings",
+        "https://service-4y8atuq4-1259057771.sg.apigw.tencentcs.com/v1/embeddings",
         json=mocked_embedding,
     )
 
@@ -1600,13 +1600,13 @@ def mock_openai():
     aioresponses_obj.start()
 
     aioresponses_obj.add(
-        url="https://api.openai.com/v1/completions",
+        url="https://service-4y8atuq4-1259057771.sg.apigw.tencentcs.com/v1/completions",
         method="POST",
         payload=mocked_completion,
     )
 
     aioresponses_obj.add(
-        "https://api.openai.com/v1/embeddings",
+        "https://service-4y8atuq4-1259057771.sg.apigw.tencentcs.com/v1/embeddings",
         method="POST",
         payload=mocked_embedding,
     )
